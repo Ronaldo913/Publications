@@ -1,0 +1,192 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: url('https://wallpapercave.com/uwp/uwp1085854.gif');
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+  background-size: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#div11{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#img12 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 7px;
+}
+
+#date {
+  margin-left: 10px;
+}
+
+#comment {
+  margin-left: 10px;
+}
+
+#img23 {
+  width: 340px;
+  height: 200px;
+}
+
+#author {
+  margin: 0;
+}
+
+#divlast {
+  width:100%;
+}
+
+#pp {
+  word-wrap: break-word;
+  padding:8px;
+  margin:0;
+  white-space: pre-line;
+}
+
+#div4 {
+  margin-left: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#div {
+  color: white;
+  background-color: #033254;
+  width: 400px;
+  border-radius: 15px;
+  width: 340px;
+  height: 380px;
+  margin: 20px;
+}
+
+#div2 {
+  display: flex;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+/* -------------------------- */
+
+.inputs {
+  margin: 5px;
+  height: 2rem;
+  padding: 5px;
+  width: 70%;
+}
+
+#inputB {
+    margin: 5px;
+    height: 2rem;
+    background: linear-gradient(rgb(54, 21, 0), rgb(28, 10, 0));
+    color: white;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+#inputB:hover {
+    background: linear-gradient(rgb(83, 34, 3), rgb(54, 20, 2));
+}
+
+#open-modal {
+/*     background: linear-gradient(rgba(54, 21, 0, 0.7), rgba(28, 10, 0, 0.7));
+    width: 10rem;
+    height: 2.7rem;
+    border-radius: 8px; */
+
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  margin: 10px;
+}
+
+#open-modal:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 90%;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+}
+
+#fade,
+#modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+}
+
+#modal.hide,
+#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+    cursor: auto;
+}
+
+#modal.hide {
+    top: 0;
+}

@@ -1,0 +1,33 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background: url('https://images-cdn.newscred.com/Zz04NjA3ZjljMjQ0ODkxMWViOWRjYzU1OGJkNjI1ZjVkZA==');
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+}
+
+#button {
+  background-color: #010219;
+  opacity: 0.6;
+  color: white;
+  font-size: 16px;
+  width: 200px;
+  height: 80px;
+  border-radius: 15px;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #04052f;
+}
+
+#h1 {
+  color: white;
+  font-weight: 120;
+  margin-bottom: 150px;
+}
+

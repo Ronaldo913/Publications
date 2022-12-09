@@ -1,0 +1,43 @@
+doctype html
+html(lang='pt-br')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Postagens
+    link(rel='stylesheet', href='/stylesheets/visualizar.css')
+  body
+    #fade.hide
+    #modal.hide
+      .modal-header
+        h2(style='color: black;') Atualizar imagem
+        button#close-modal(style='color: black; background-color: transparent') X
+      .modal-body
+        div
+        p=msg
+        form#form(action='/publications/update' method='POST')
+          input.inputs(name="photo" type='text' value='' placeholder='Insira a imagem da publicação')
+          input#inputB(type='submit' value='atualizar')
+    each publication in publications
+      #div
+        #div2
+          div
+            img#img12(src=publication.avatar)
+          #div4
+            div
+              p#author=publication.author
+            div(style='display: flex;')
+              div=publication.type
+              #date=publication.date
+        div
+          img#img23(src=publication.photo)
+        div#divlast
+          div(style='display: flex;')
+            #comment=publication.like
+            #comment=publication.comment  
+          p#pp=publication.caption
+        #div11
+          button#open-modal atualizar
+          a(href=publication.url+'/delete')
+            button deletar
+    script(src='/javascripts/script.js')

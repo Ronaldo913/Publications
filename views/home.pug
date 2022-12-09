@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width')
+    title Publications
+    link(rel='stylesheet', href='/stylesheets/styleHome.css')
+body
+  #fade.hide
+  #modal.hide
+    .modal-header
+      h2(style='color: black;') Cadastrar Publicações
+      button#close-modal(style='color: black; background-color: transparent') X
+    .modal-body
+      div
+      p=msg
+      form#form(action='/publications/create/' method='POST')
+        input.inputs(name="photo" type='text' value='' placeholder='Insira a imagem da publicação')
+        input.inputs(name="author" type='text' value='' placeholder='Insira o nome do usuário')
+        input.inputs(name="avatar" type='text' value='' placeholder='Insira a imagem do usuário')
+        input.inputs(name="date" type='text' value='' placeholder='Insira a data da publicação')
+        input.inputs(name="type" type='text' value='' placeholder='Insira o tipo da publicação')
+        input.inputs(name="like" type='text' value='' placeholder='Insira a quantidade de like')
+        input.inputs(name='comment' type='text' value='' placeholder='Insira a quantidade de comentário')
+        input.inputs(name='caption' type='text' value='' placeholder='Insira a descrição da imagem')
+        input#inputB(type='submit' value='cadastrar')
+
+  #container
+    span
+      button#open-modal(style='color: white;') Cadastrar
+      a(href='/visualizar')
+        button#open-modal(style='color: white;') Visualizar
+      a(href='/publications')
+        button#open-modal(style='color: white;') JSON
+
+  script(src='/javascripts/script.js')
