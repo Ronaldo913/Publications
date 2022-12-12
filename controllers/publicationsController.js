@@ -46,15 +46,17 @@ exports.create = (req, res) => {
 
 exports.update = async (req, res) => {
   if (req.method == "POST") {
-    const filter = { _id: new ObjectId(req.body.id) };
-    console.log(filter);
+    const filter = { _id: new ObjectId(req.params.publicationId) };
+    //console.log(filter);
     const update = {
       photo: req.body.photo
     };
-    console.log(update);
+    //console.log(update);
     await Publication.findOneAndUpdate(filter, update).then(function(err, result) {
+      console.log(err);
       console.log(req.body.photo);
       msg = "Postagem atualizada com sucesso!";
+      console.log(msg);
       // res => response => resposta 
       res.msg = msg;
       exports.list(req, res);

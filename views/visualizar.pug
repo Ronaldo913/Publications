@@ -16,6 +16,7 @@ html(lang='pt-br')
         div
         p=msg
         form#form(action='/publications/update' method='POST')
+          input(type="hidden" id="target" name="target" value="")
           input.inputs(name="photo" type='text' value='' placeholder='Insira a imagem da publicação')
           input#inputB(type='submit' value='atualizar')
     each publication in publications
@@ -37,7 +38,7 @@ html(lang='pt-br')
             #comment=publication.comment  
           p#pp=publication.caption
         #div11
-          button#open-modal atualizar
+          button.open-modal(id=publication.url) atualizar
           a(href=publication.url+'/delete')
             button deletar
     script(src='/javascripts/script.js')
